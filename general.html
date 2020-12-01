@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webserver</title>
+
+</head>
+<body>
+    <body bgcolor = #b6b9d7>
+    <font face="Comic Sans MS,arial,verdana">
+    <center>
+    <div class="alumnos">
+        <h2>Registro de alumnos y materias</h2>
+        <form action="/alumno" method="POST">
+            <label for="alumn">Nombre del alumno: </label>
+            <input type="text" name="alumn" value="">
+            <br>
+            <br>
+            <label for="mat">Materia</label>
+            <input type="text" name="asignature" value="">
+            <br>
+            <br>
+            <label for="alumn">Calificacion</label>
+            <input type="number" name="calification" max="100" min="0">
+            <br>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div> <br><br>
+
+    <div class="promedios">
+        <h2>Promedio por alumno</h2>
+        <form action="/promedio_alumno" method="POST">
+            <label for="asign">Alumno:</label>
+            <input type="text" name="calification_prom" value="">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>  <br><br>
+
+    <div class="promedios">
+        <h2>Promedio por materia</h2>
+        <form action="/promedio_materia" method="POST">
+            <label for="asign">Materia:</label>
+            <input type="text" name="asignature_prom" value="">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>  <br><br>
+
+    <br>
+    <br>
+    <a href="/promedio_general" style="color: blueviolet; text-decoration: none;">Promedio General</a>
+    </center>
+    </font>
+    </body>
+
+</body>
+</html>
