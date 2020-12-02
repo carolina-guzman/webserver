@@ -132,11 +132,11 @@ func PromedioPorMateria(res http.ResponseWriter, req *http.Request) {
 			"Content-Type",
 			"text/html",
 		)
-		//cadenaFinal := "EL promedio de: " + mat + " es: " + strconv.FormatFloat(reply, 'f', 3, 64)
+		cadenaFinal := "EL promedio de " + mat + " es: " + strconv.FormatFloat(reply, 'f', 3, 64)
 		fmt.Fprintf(
 			res,
-			iniciarHTML("promedio_materia.html"),
-			"hola",
+			iniciarHTML("materia.html"),
+			cadenaFinal,
 		)
 	}
 }
@@ -193,7 +193,7 @@ func main(){
 	alumnos = make(map[string][]Alumno)
 	http.HandleFunc("/", iniciar)
 	http.HandleFunc("/alumno", NuevoAlumno)
-	http.HandleFunc("/promedio_materia", PromedioPorMateria)
+	http.HandleFunc("/materia", PromedioPorMateria)
 	http.HandleFunc("/promedio_alumno", PromedioPorAlumno)
 	http.HandleFunc("/promedio_general", PromedioGeneral)
 	http.ListenAndServe(":9000", nil)
